@@ -1,0 +1,3 @@
+<ng-container *ngFor="let era of eras">
+  <button (click)="emitEraSelection(era)" [ngClass]="{'selected': selected_era == era}">{{era}}</button>
+</ng-container>

@@ -1,0 +1,27 @@
+<ng-container *ngFor="let item of data">
+  <div class="tile">
+    <div class="left">
+      <ng-container *ngIf="$any(item).miniaturka!= undefined; else empty">
+        <img src="{{getCoverImgUrl($any(item).miniaturka)}}">
+      </ng-container>
+      <ng-template #empty>
+        Brak okładki
+      </ng-template>
+    </div>
+    <div class="right">
+      <ng-container *ngIf="$any(item).$.brak == undefined; else brak">
+        <ng-container *ngFor="let info of pureDetails(item)|keyvalue">
+          <ng-container *ngIf="info.key == 'plik'; else plik">
+            <span>{{info.key}}: <a href="{{getFileUrl(info.value)}}">tutaj</a></span>
+          </ng-container>
+          <ng-template #plik>
+            <span>{{info.key + ': ' + info.value}}</span>
+          </ng-template>
+        </ng-container>
+      </ng-container>
+      <ng-template #brak>
+        <span>{{$any(item).$.brak}}</span>
+      </ng-template>
+    </div>
+  </div>
+</ng-container>

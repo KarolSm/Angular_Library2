@@ -1,0 +1,5 @@
+<div class="center">
+  <ng-container *ngFor="let item of magazines">
+    <img src="{{getImgUrl($any(item).src)}}" (click)="emitMagazineSelection($any(item).klik)">
+  </ng-container>
+</div>

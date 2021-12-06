@@ -1,0 +1,14 @@
+<ng-container *ngIf="selected_magazine === ''; then gazety else dane"></ng-container>
+
+<ng-template #gazety>
+  <gazety [magazines]="magazines" (magazineSelected)="changeSelectedMagazine($event)"></gazety>
+</ng-template>
+
+<ng-template #dane> 
+  <lata [eras]="years" [selected_era]="selected_era" (eraSelected)="changeSelectedEra($event)"></lata>
+  <br>
+  <button (click)="selected_magazine = ''">cofnij</button>
+  <br>
+  <dane [magazine_title]="selected_magazine" [data]="data"></dane>
+
+</ng-template>

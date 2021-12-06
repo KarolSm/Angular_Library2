@@ -1,0 +1,18 @@
+div.center {
+  display: flex;
+  height: 600px;
+  width: 400px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+img {
+  width: 200px;
+  height: 90px;
+  object-fit: contain;
+  display: block;
+  padding: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}

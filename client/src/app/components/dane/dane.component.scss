@@ -1,0 +1,28 @@
+.tile {
+  width: 600px;
+  max-height: 200px;
+  display: flex;
+  flex-direction: row;
+  margin: 10px
+}
+
+.left {
+  width: 200px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 100%;
+  object-fit: contain;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: center;
+}
